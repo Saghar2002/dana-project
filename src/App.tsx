@@ -1,15 +1,15 @@
-import './index.css'
+import Header from "./features/home/header/Header";
+import Hero from "./features/home/hero/Hero";
+import Services from "./features/home/services/Services";
 
 function App() {
 
 
   return (
     <>
-   
-      <h1 className="text-black  font-extrabold text-9xl text-white">
-        Hello Saghar 🚀
-      </h1>
-  
+      <Header />
+      <Hero />
+      <Services></Services>
     </>
   )
 }

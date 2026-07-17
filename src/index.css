@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --dana-gold: #ffb22c;
+    --dana-green: #529553;
+    --dana-navy: #1a3b41;
+    --dana-header-height: 114px;
+  }
+  @font-face {
+    font-family: "EstedadFANum";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/estedad-fd-regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "EstedadFANum";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/estedad-fd-bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Peyda";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/peyda-bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Peyda";
+    font-style: normal;
+    font-weight: 900;
+    src: url("/fonts/peyda-black.woff2") format("woff2");
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    font-family: "EstedadFANum", Tahoma, Arial, sans-serif;
+  }
+}
+
+.font-heading {
+  font-family: "Peyda", "EstedadFANum", sans-serif;
+}
+
+.hero-background {
+  isolation: isolate;
+  position: relative;
+  background-color: #0c2022;
+}
+
+.hero-background::before {
+  background-image:
+  linear-gradient(30deg, transparent 48%, #ffffff 49%, #ffffff 51%, transparent 52%),
+  linear-gradient(-30deg, transparent 48%, #ffffff 49%, #ffffff 51%, transparent 52%);
+  background-size: 80px 80px; /* سایز لوزی‌ها رو کمی کوچیک‌تر کردم که شبیه عکس بشه */
+  content: "";
+  inset: 0;
+  opacity: 0.05; /* شفافیت رو گذاشتم روی 0.05 که ملایم باشه */
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.hero-background > * {
+  position: relative;
+  z-index: 1;
+}
