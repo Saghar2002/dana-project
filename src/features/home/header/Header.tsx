@@ -16,7 +16,7 @@ const Header = () => {
     }, []);
 
     return (
-      <header className={`fixed top-0 left-0 z-50 w-full transition-[background-color,border-color] duration-200 ${isScrolled ? "border-b border-[#1a3b41]/20 bg-[#f5f5f5]" : "bg-transparent"}`} dir="rtl">
+      <header className={`fixed top-0 left-0 z-50 w-full flex h-[114px] items-center justify-between gap-5 border-b border-white/10 transition-[background-color,border-color] duration-200 ${isScrolled ? "border-b border-[#1a3b41]/20 bg-[#f5f5f5]" : "bg-transparent"}`} dir="rtl">
         <Container>
           <div className="flex h-[114px] items-center justify-between gap-5">
             <HeaderLogo isScrolled={isScrolled} />
