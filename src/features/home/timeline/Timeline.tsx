@@ -2,43 +2,103 @@ import { FiArrowLeft } from "react-icons/fi";
 import Container from "../../../components/common/container/Container";
 
 const stages = [
-  { title: "نیازسنجی دقیق", image: "/images/timeline-1.png" },
-  { title: "طراحی مفهومی", image: "/images/timeline-2.png" },
-  { title: "توسعه فنی", image: "/images/timeline-3.png" },
-  { title: "تست نهایی", image: "/images/timeline-4.png" },
-  { title: "استقرار عملیاتی", image: "/images/timeline-5.png" },
+  { title: "نیازسنجی\nدقیق", image: "/images/timeline-1.png" },
+  { title: "طراحی\nمفهومی", image: "/images/timeline-2.png" },
+  { title: "توسعه\nفنی", image: "/images/timeline-3.png" },
+  { title: "تست\nنهایی", image: "/images/timeline-4.png" },
+  { title: "استقرار\nعملیاتی", image: "/images/timeline-5.png" },
 ];
 
 const Timeline = () => {
   return (
-    <section className="bg-[#f5f5f5] py-24 text-[#1a3b41]" dir="rtl">
+    <section   dir="rtl"
+ className="py-24 bg-[#f8f8f8]">
       <Container>
-        <div className="mb-14 flex items-center gap-4">
-          <span className="h-10 w-px bg-[#529553]" />
+        {/* Heading */}
+        <div className="mb-16 flex items-center gap-4">
+          <span className="w-[2px] h-12 bg-[#5C9B59]" />
+
           <div>
-            <h2 className="font-heading text-2xl font-black">تایم‌لاین پروژه</h2>
-            <p className="mt-1 text-sm font-semibold text-[#1a3b41]/35">Project timeline</p>
+            <h2 className="font-heading text-3xl font-black text-[#18363d]">
+              تایم‌لاین پروژه
+            </h2>
+
+            <p className="text-sm text-gray-400 font-semibold">
+              Project timeline
+            </p>
           </div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3 xl:grid-cols-5 xl:gap-5">
-          {stages.map(({ title, image }, index) => (
-            <div key={title} className="relative">
-              <article className="relative h-40 overflow-hidden rounded-xl bg-[#1a3b41]">
-                <img src={image} alt={title} className="absolute inset-0 h-full w-full object-cover" />
-                <span className="absolute inset-0 bg-[#1a3b41]/20 backdrop-blur-[2px]" />
-                <div className="absolute inset-x-3 top-1/2 -translate-y-1/2 rounded-lg border border-white/20 bg-[#1a3b41]/35 px-3 py-3 text-center text-white">
-                  <h3 className="font-heading text-xl font-black">{title}</h3>
-                </div>
-              </article>
-              {index < stages.length - 1 && (
-                <span className="absolute -left-7 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 place-items-center rounded-lg bg-[#ffb22c] text-[#1a3b41] xl:grid">
-                  <FiArrowLeft className="text-lg" />
-                </span>
-              )}
-            </div>
-          ))}
-        </div>
+        {/* Timeline */}
+        <div className="relative py-5">
+
+  <div className="absolute inset-y-0 left-2 right-2 rounded-2xl bg-[#EEF3EF]" />
+
+  <div className="relative hidden xl:flex">
+
+    {stages.map((item, index) => (
+      <div key={index} className="relative flex-1">
+
+        <article
+          className="relative h-[102px] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${item.image})`,
+          }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-[#18363d]/25 backdrop-blur-[0.5px]" />
+
+          {/* Content */}
+          <div
+            className="
+              absolute
+              inset-y-2
+              right-2
+              left-2
+              z-10
+              flex
+              items-center
+              justify-start
+              rounded-lg
+              bg-[#18363d]/20
+              backdrop-blur-[0.5px]
+              px-5
+            "
+          >
+            <h3 className="font-heading whitespace-pre-line text-right text-[18px] font-black leading-8 text-white">
+              {item.title}
+            </h3>
+          </div>
+
+          {index !== stages.length - 1 && (
+            <span
+              className="
+                absolute
+                -left-4
+                top-1/2
+                z-20
+                flex
+                h-8
+                w-8
+                -translate-y-1/2
+                items-center
+                justify-center
+                rounded-lg
+                bg-[#ffb22c]
+                text-[#18363d]
+              "
+            >
+              <FiArrowLeft className="text-sm" />
+            </span>
+          )}
+        </article>
+
+      </div>
+    ))}
+
+  </div>
+
+</div>
       </Container>
     </section>
   );

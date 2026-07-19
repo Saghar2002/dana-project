@@ -19,8 +19,36 @@
   @font-face {
     font-family: "EstedadFANum";
     font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/estedad-fd-medium.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "EstedadFANum";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/estedad-fd-semibold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "EstedadFANum";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/estedad-fd-extrabold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "EstedadFANum";
+    font-style: normal;
     font-weight: 700;
     src: url("/fonts/estedad-fd-bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Peyda";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/peyda-extrabold.woff2") format("woff2");
   }
 
   @font-face {
@@ -38,13 +66,32 @@
   }
 
   html {
+    font-size: 16px;
     scroll-behavior: smooth;
   }
 
   body {
+    color: #1a3b41;
     margin: 0;
     min-width: 320px;
     font-family: "EstedadFANum", Tahoma, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Peyda", "EstedadFANum", sans-serif;
+    font-weight: 800;
+  }
+
+  a,
+  button {
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
   }
 }
 
@@ -74,12 +121,25 @@
   background-size: auto;
 }
 
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-pattern {
+    background-size: cover;
+    background-position: bottom left;
+  }
+}
+
 /* ===== اسکرول بار سفید با دستگیره زرد ===== */
 
 /* برای کروم، اج، سافاری، اپرا */
 ::-webkit-scrollbar {
-  width: px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {

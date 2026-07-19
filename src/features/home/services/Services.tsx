@@ -18,68 +18,102 @@ const Services = () => {
         <div className="relative z-10 mx-auto -mb-32 h-[201px] w-[184px] text-center">
   
   {/* SVG با شکل اصلی */}
-  <svg 
-    viewBox="0 0 184 201" 
-    className="absolute inset-0 h-full w-full" 
-    aria-hidden="true"
-  >
-    <defs>
-      {/* گرادینت برای حاشیه */}
-      <linearGradient 
-        id="services-title-border" 
-        x1="0" 
-        y1="0" 
-        x2="184" 
-        y2="201" 
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#ffffff" stopOpacity="0.7" />
-        <stop offset="1" stopColor="#ffffff" stopOpacity="0.08" />
-      </linearGradient>
-      
-      {/* کلیپ برای حذف ۱ سانت پایین */}
-      <clipPath id="bottom-gap">
-        <path d="M16.0596 0.5 L167.94 0.5 C177.575 0.5 184.875 9.19601 183.206 18.6846 L153.485 187.685 C152.182 195.095 145.744 200.5 138.22 200.5 L45.7803 200.5 C38.2557 200.5 31.818 195.095 30.5146 187.685 L0.793945 18.6846 C-0.874695 9.19602 6.4254 0.5 16.0596 0.5 Z" />
-        {/* حذف ۱ سانت از پایین (حدود ۱۰px از عرض ۱۸۴px) */}
-        <rect x="45%" y="190" width="10%" height="15" />
-      </clipPath>
-    </defs>
-    
-    {/* شکل اصلی با افکت شیشه‌ای و کدری بیشتر */}
-    <path 
-      d="M16.0596 0.5 L167.94 0.5 C177.575 0.5 184.875 9.19601 183.206 18.6846 L153.485 187.685 C152.182 195.095 145.744 200.5 138.22 200.5 L45.7803 200.5 C38.2557 200.5 31.818 195.095 30.5146 187.685 L0.793945 18.6846 C-0.874695 9.19602 6.4254 0.5 16.0596 0.5 Z"
-      fill="rgba(255, 255, 255, 0.2)"
-      style={{
-        backdropFilter: 'blur(80px)',
-        WebkitBackdropFilter: 'blur(60px)',
-      }}
+<div   className="
+  relative
+  w-[170px]
+  h-[198px]
+  mx-auto
+  "
+  style={{
+    filter: "drop-shadow(0 0 30px rgba(255,255,255,.04))",
+  }}>
+
+  {/* SVG */}
+  <svg
+  viewBox="0 0 184 201"
+  className="absolute inset-0 w-full h-full"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient
+      id="paint_linear"
+      x1="92"
+      y1="42.5"
+      x2="92"
+      y2="201"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stopColor="white" stopOpacity="0" />
+      <stop offset="1" stopColor="white" />
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M16.0596 0.5L167.94 0.5C177.575 0.5 184.875 9.19601 183.206 18.6846L153.485 187.685C152.182 195.095 145.744 200.5 138.22 200.5L45.7803 200.5C38.2557 200.5 31.818 195.095 30.5146 187.685L0.793945 18.6846C-0.874695 9.19602 6.4254 0.5 16.0596 0.5Z"
+    fill="white"
+    fillOpacity="0.65"
+    stroke="url(#paint_linear)"
+  />
+</svg>
+<div
+  className="
+  absolute
+  inset-0
+  rounded-[18px]
+  bg-white/10
+  blur-2xl
+  opacity-30
+  -z-10
+  "
+/>
+
+    <div
+    className="
+    absolute
+    inset-0
+    z-10
+    flex
+    flex-col
+    justify-center
+    items-center
+    "
+    >
+
+    <FaPencilRuler
+      className="
+      text-[28px]
+      text-[#183B40]
+      mb-4
+      "
     />
-    
-    {/* حاشیه سفید با گرادینت */}
-    <path 
-      d="M16.0596 0.5 L167.94 0.5 C177.575 0.5 184.875 9.19601 183.206 18.6846 L153.485 187.685 C152.182 195.095 145.744 200.5 138.22 200.5 L45.7803 200.5 C38.2557 200.5 31.818 195.095 30.5146 187.685 L0.793945 18.6846 C-0.874695 9.19602 6.4254 0.5 16.0596 0.5 Z"
-      fill="none"
-      stroke="url(#services-title-border)"
-      strokeWidth="2"
-      clipPath="url(#bottom-gap)"
-    />
-    
-    {/* حاشیه ضخیم‌تر برای جلوه بیشتر */}
-    <path 
-      d="M16.0596 0.5 L167.94 0.5 C177.575 0.5 184.875 9.19601 183.206 18.6846 L153.485 187.685 C152.182 195.095 145.744 200.5 138.22 200.5 L45.7803 200.5 C38.2557 200.5 31.818 195.095 30.5146 187.685 L0.793945 18.6846 C-0.874695 9.19602 6.4254 0.5 16.0596 0.5 Z"
-      fill="none"
-      stroke="rgba(255, 255, 255, 0.15)"
-      strokeWidth="6"
-      clipPath="url(#bottom-gap)"
-    />
-  </svg>
-  
-  {/* محتوای داخل شکل */}
-  <div className="absolute inset-x-0 top-[52px] flex flex-col items-center z-10">
-    <FaPencilRuler className="mb-3 text-2xl text-[#1a3b41]" />
-    <h2 className="font-heading text-2xl text-[#1a3b41] font-black">خدمات</h2>
-    <span className="mt-1 text-xs font-semibold text-white/70">Services</span>
-  </div>
+
+    <h3
+      className="
+      text-[29px]
+      font-black
+      leading-none
+      text-[#183B40]
+      "
+    >
+        خدمات
+    </h3>
+
+    <span
+      className="
+      mt-3
+      text-[13px]
+      tracking-[5px]
+      uppercase
+      font-semibold
+      text-white
+      "
+    >
+        Services
+    </span>
+
+</div>
+
+</div>
 </div>
 
         <div className="grid overflow-hidden rounded-2xl sm:grid-cols-2 xl:grid-cols-3">
