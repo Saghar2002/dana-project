@@ -32,7 +32,7 @@ const CatalogSection = () => {
   return (
     <section className="bg-[#f5f5f5] py-16 sm:py-24" dir="rtl">
       <Container>
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8 pb-20">
           {cards.map(({ title, subtitle, image, primaryLabel, secondaryLabel, isReversed }) => (
             <article key={title} className="relative min-h-[250px] overflow-hidden rounded-[22px] sm:h-[260px]">
               <img src={image} alt="" className={`absolute top-0 z-0 h-full w-[45%] scale-[1.02] rounded-[22px] object-cover opacity-90 blur-[1.5px] ${isReversed ? "right-0" : "left-0"}`} />

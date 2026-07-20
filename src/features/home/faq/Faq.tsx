@@ -37,7 +37,7 @@ const Faq = () => {
 
               <div className="relative z-30 mx-auto -mt-12 h-[180px] w-full max-w-[360px] rounded-[28px] bg-white/20 shadow-[0_20px_60px_rgba(0,0,0,.10)] backdrop-blur-3xl [clip-path:polygon(5%_0%,100%_0%,95%_100%,0%_100%)] sm:h-[220px] lg:absolute lg:-top-[120px] lg:right-[200px] lg:mt-0 lg:h-[250px]">
                 <div className="flex h-full items-center justify-center gap-5 px-6 sm:gap-8 sm:px-8">
-                  <span className="mt-5 h-[50px] w-[2px] bg-[#173b40]/20" aria-hidden="true" />
+                  <span className="mt-5 h-[48px] w-[1px] bg-[#1a3b41]/70" aria-hidden="true" />
                   <div className="flex h-full flex-col items-center justify-center">
                     <h2 className="font-heading text-2xl font-black text-[#173b40] sm:text-[28px]">سوالات متداول</h2>
                     <p className="mt-2 text-sm text-[#173b40]/45">Most asked question</p>

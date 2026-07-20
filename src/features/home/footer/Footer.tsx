@@ -16,7 +16,7 @@ const FooterHeading = ({ title, subtitle }: FooterHeadingProps) => (
 const Footer = () => {
   return (
     <footer dir="rtl">
-      <div className="relative overflow-hidden bg-[radial-gradient(46%_88%_at_69%_44%,#0d1f22_0%,#031518_100%)] text-white">
+      <div className="relative overflow-visible bg-[radial-gradient(46%_88%_at_69%_44%,#0d1f22_0%,#031518_100%)] text-white ">
         <span className="absolute inset-0 bg-[url('/images/footer-right.png')] bg-cover bg-right-top bg-no-repeat opacity-10" aria-hidden="true" />
         <Container>
           <div className="relative">
@@ -55,6 +55,28 @@ const Footer = () => {
     max-w-[470px]
     overflow-visible
     sm:h-[330px]
+    left-[-30px]
+    lg:left-[-10px]
+    lg:top-[50px]
+    lg:mt-0
+    lg:h-[390px]
+    lg:w-[470px]
+  "
+>
+  {/* کارت زرد */}
+  <div
+  dir="ltr"
+  className="
+    relative
+    
+    z-20
+    mx-auto
+    mt-2
+    h-[280px]
+    w-full
+    max-w-[470px]
+    overflow-visible
+    sm:h-[330px]
     lg:absolute
     lg:left-[-140px]
     lg:top-[-95px]
@@ -63,101 +85,38 @@ const Footer = () => {
     lg:w-[470px]
   "
 >
-  {/* کارت زرد */}
-  <div className="relative flex h-full w-full overflow-visible rounded-r-[70px] bg-[#f7b900] shadow-[0_20px_40px_rgba(0,0,0,0.18)]">
+  {/* عکس - پایین‌ترین لایه */}
+  <img
+    src="/images/footer-help.png"
+    alt="نیاز به راهنمایی دارید"
+    className="absolute inset-y-0 left-0 h-full w-[52%] rounded-r-[40px] object-cover"
+  />
 
-    {/* خط مورب */}
-    <div
-      className="
-        absolute
-        left-[-38px]
-        top-0
-        h-full
-        w-20
-        bg-[#0d1f22]
-        -skew-x-[16deg]
-      "
-    />
-
-    {/* عکس */}
-    <img
-      src="/images/footer-help.png"
-      alt="نیاز به راهنمایی دارید"
-      className="
-        absolute
-        left-0
-        top-0
-        h-full
-        w-[43%]
-        object-cover
-      "
-    />
-
-    {/* گرادیانت روی عکس */}
-    <div
-      className="
-        absolute
-        left-0
-        top-0
-        h-full
-        w-[43%]
-        bg-gradient-to-r
-        from-transparent
-        via-transparent
-        to-[#f7b900]/20
-      "
-    />
-
-    {/* متن */}
-    <div
-      dir="rtl"
-      className="
-        pr-10
-        pl-6
-        flex
-        h-full
-        w-[60%]
-        flex-col
-        items-start
-        text-right
-        justify-center
-        px-6
-        text-[#173b40]
-      "
-    >
-      <h3 className="font-heading text-2xl font-black leading-none sm:text-[34px]">
+  {/* باکس زرد با برش مورب - روی عکس */}
+  <div
+    className="absolute inset-y-0 right-0 flex h-full w-[68%] items-center align-middle rounded-r-[70px] bg-[#f7b900] shadow-[0_20px_40px_rgba(0,0,0,0.18)]"
+    style={{ clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
+  >
+    <div dir="rtl" className="pr-6 pl-6 text-right text-[#173b40]">
+      <h3 className="font-heading lg:text-xl font-black leading-none sm:text-lg">
         نیاز به راهنمایی دارید؟
       </h3>
 
       <p className="mt-3 text-base font-medium text-[#173b40]/55">
-        Do you need help?
+        ?Do you need help
       </p>
 
+      
       <a
         href="tel:02191303862"
         dir="ltr"
-        className="
-          mt-7
-          flex
-          h-11
-          items-center
-          gap-3
-          rounded-xl
-          bg-white
-          px-5
-          sm:h-[54px]
-          sm:px-8
-          font-bold
-          shadow-md
-          transition
-          hover:scale-[1.03]
-        "
-      >
+        className="mt-7 flex h-11 w-fit items-center gap-3 rounded-xl text-[#f7b900] bg-white px-5 font-bold shadow-md transition hover:scale-[1.03] sm:h-[54px] sm:px-8">
         <FiHeadphones className="text-[#f7b900]" />
         021-91303862
       </a>
     </div>
   </div>
+</div>
 </div>
 
           </div>
