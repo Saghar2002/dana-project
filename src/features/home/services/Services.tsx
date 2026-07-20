@@ -67,7 +67,7 @@ const Services = () => {
               <path
                 d="M16.0596 0.5L167.94 0.5C177.575 0.5 184.875 9.19601 183.206 18.6846L153.485 187.685C152.182 195.095 145.744 200.5 138.22 200.5L45.7803 200.5C38.2557 200.5 31.818 195.095 30.5146 187.685L0.793945 18.6846C-0.874695 9.19602 6.4254 0.5 16.0596 0.5Z"
                 fill="white"
-                fillOpacity="0.4"
+                fillOpacity="0.5"
                 stroke="url(#services-title-border)"
               />
             </svg>
@@ -86,13 +86,13 @@ const Services = () => {
               <img src={image} alt={title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
               <span className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a3b41]/5 to-[#1a3b41]/80 transition-all duration-200 group-hover:via-[#1a3b41]/20 group-hover:to-[#1a3b41]/90" />
 
-              <span className="z-10 m-[14px] flex h-full flex-col items-center justify-end rounded-lg border border-transparent px-4 pb-16 text-center transition-all duration-200 group-hover:border-white/50 group-hover:pb-[70px]">
+              <span className="z-10 m-[14px] flex h-full flex-col items-center justify-end rounded-lg border border-transparent px-4 pb-20 text-center transition-all duration-200 group-hover:border-white/50 group-hover:pb-[70px]">
                 
                 <strong className="font-heading text-xl font-extrabold text-white">{title}</strong>
               </span>
 
               <span className="relative z-10 h-0 overflow-visible px-[14px] transition-[height] duration-200 group-hover:h-[124px]">
-                <span className="absolute -top-10 left-1/2 z-10 grid h-10 w-10 -translate-x-1/2 place-items-center transition-transform duration-200 group-hover:-translate-y-1">
+                <span className="absolute -top-14 left-1/2 z-10 grid h-10 w-10 -translate-x-1/2 place-items-center transition-transform duration-200 group-hover:-translate-y-1">
                   <span className="absolute inset-0 bg-white/25 [clip-path:polygon(50%_0%,100%_20%,100%_80%,50%_100%,0%_80%,0%_20%)] transition-all duration-200 group-hover:translate-y-1 group-hover:bg-[#ffb22c]" />
                   <FiArrowUp className="relative text-lg text-[#1a3b41]" />
                 </span>
