@@ -1,4 +1,5 @@
 import Container from "../../../components/common/container/Container";
+import { FiArrowLeft } from "react-icons/fi";
 
 const posts = [
   {
@@ -10,11 +11,13 @@ const posts = [
     title: "آینده نرم‌افزارهای سازمانی در عصر هوش مصنوعی",
     category: "آموزش و نکات تخصصی",
     image: "/images/blog-03.png",
+    excerpt: "در سال‌های اخیر، هوش مصنوعی به یکی از مؤثرترین فناوری‌های تحول‌آفرین در دنیای نرم‌افزارهای سازمانی تبدیل شده است.",
   },
   {
     title: "۵ فناوری مهم که آینده حسابداری را دگرگون می‌کنند",
     category: "فناوری و نوآوری",
     image: "/images/blog-04.png",
+    excerpt: "صنعت حسابداری در حال تجربه تحولی عمیق است؛ تحولی که ناشی از ورود فناوری‌های نوین به فضای مالی کسب‌وکارهاست.",
   },
 ];
 
@@ -87,15 +90,15 @@ const Blog = () => {
 </article>
 
       <div className="grid gap-5 xl:order-3">
-  {sidePosts.map(({ title, category, image }) => (
+  {sidePosts.map(({ title, category, image, excerpt }) => (
     <article key={title} className="group overflow-visible">
       <a
         href="#blog"
-        className="grid min-h-[192px] grid-cols-[48%_58%] items-center"
+        className="grid min-h-[250px] grid-cols-[34%_66%] items-center"
       >
         
         {/* Image */}
-<div className="relative overflow-hidden rounded-[22px] border-2 border-white">
+<div className="relative h-[170px] overflow-hidden rounded-[24px] border-2 border-white">
   <img
     src={image}
     alt={title}
@@ -109,28 +112,24 @@ const Blog = () => {
 </div>
 
         {/* White Card */}
-        <div className="relative px-6 py-7 -mt-12 -mr-10 z-20">
-          <div className="relative overflow-hidden rounded-[22px] bg-white shadow-[0_8px_28px_rgba(26,59,65,0.06)]">
-
-            {/* مورب سمت راست */}
-            <div
-              className="absolute top-0 right-0 h-full w-10 bg-[#f7f7f7]"
-              style={{
-                transform: "skewX(-12deg) translateX(18px)",
-              }}
-            />
+        <div className="relative z-20 -mr-8 -mt-10 px-4 py-5">
+         <div className="relative h-[175px] overflow-hidden rounded-[26px] bg-white shadow-[0_12px_35px_rgba(0,0,0,.08)]">
 
             {/* محتوا */}
-            <div className="relative z-10 px-8 py-8 min-h-[140px] w-[360px]">
-              {/* <span className="text-[11px] font-bold text-[#529553]">
-                {category}
-              </span> */}
-
-              <h3 className=" mt-2 line-clamp-3 text-lg font-black leading-6">
+            <div className="relative z-10 flex h-full flex-col justify-start px-8 pt-6">
+              <h3 className="line-clamp-2 text-[18px] font-black leading-8">
                 {title}
               </h3>
-            </div>
+              <div className="mt-3 flex items-end justify-between gap-5">
 
+  <p className="line-clamp-2 flex-1 text-[14px] leading-7 text-[#1a3b41]/55">
+    {excerpt}
+  </p>
+
+  <FiArrowLeft className="shrink-0 text-[22px] text-[#173b40]/35 transition group-hover:-translate-x-1" />
+
+</div>
+</div>
           </div>
         </div>
       </a>
