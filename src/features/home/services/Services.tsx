@@ -6,10 +6,18 @@ import {
   FaSitemap,
   FaTowerBroadcast,
 } from "react-icons/fa6";
+import type { IconType } from "react-icons";
 import { FiArrowUp } from "react-icons/fi";
 import Container from "../../../components/common/container/Container";
 
-const services = [
+type Service = {
+  title: string;
+  subtitle: string;
+  image: string;
+  icon: IconType;
+};
+
+const services: Service[] = [
   {
     title: "تولید نرم‌افزار سفارشی",
     subtitle: "راهکارهای اختصاصی نرم‌افزاری برای نیازهای دقیق شما",

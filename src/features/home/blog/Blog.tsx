@@ -1,7 +1,14 @@
 import Container from "../../../components/common/container/Container";
 import { FiArrowLeft } from "react-icons/fi";
 
-const posts = [
+type BlogPost = {
+  title: string;
+  category: string;
+  image: string;
+  excerpt?: string;
+};
+
+const posts: BlogPost[] = [
   {
     title: "چرا پشتیبانی نرم‌افزاری باکیفیت برای کسب‌وکارها حیاتی است؟",
     category: "آموزش و نکات تخصصی",
@@ -28,7 +35,7 @@ const Blog = () => {
     <section className="blog-background overflow-hidden bg-[#f5f5f5] py-24 text-[#1a3b41]" dir="rtl">
       <Container>
         <div className="grid items-start gap-6 xl:grid-cols-[1fr_1.55fr_1.15fr]">
-          <div className="flex min-h-[410px] flex-col justify-center xl:order-1">
+          <div className="flex min-h-0 flex-col justify-center pb-2 xl:order-1 xl:min-h-[410px] xl:pb-0">
             <div className="flex flex-col items-start gap-3">
               <div className="relative pr-5 before:absolute before:right-0 before:top-1/2 before:h-10 before:w-px before:-translate-y-1/2 before:bg-[#529553]">
                 <h5 className="font-heading text-3xl font-black">وبلاگ</h5>
@@ -140,7 +147,7 @@ const Blog = () => {
         {/* <a href="#blog" className="mx-auto mt-10 flex w-fit items-center gap-2 rounded-lg border border-[#ffb22c] px-7 py-2.5 font-bold text-[#1a3b41] transition hover:bg-[#ffb22c]">
           مطالعه <FiArrowLeft />
         </a> */}
-        <a href="#blog" className="mx-auto mt-14 flex w-fit items-center gap-2 rounded-lg bg-[#ffb22c] px-7 py-2.5 font-bold text-[#1a3b41] transition hover:bg-[#fdc564]">
+        <a href="#blog" className="mx-auto -mt-12 flex w-fit items-center gap-2 rounded-lg bg-[#ffb22c] px-7 py-2.5 font-bold text-[#1a3b41] transition hover:bg-[#fdc564]">
           همه مقالات
         </a>
       </Container>

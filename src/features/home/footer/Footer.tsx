@@ -1,7 +1,12 @@
 import { FiArrowUpLeft, FiHeadphones, FiInstagram, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi";
 import Container from "../../../components/common/container/Container";
 
-const FooterHeading = ({ title, subtitle }: { title: string; subtitle: string }) => (
+type FooterHeadingProps = {
+  title: string;
+  subtitle: string;
+};
+
+const FooterHeading = ({ title, subtitle }: FooterHeadingProps) => (
   <div className="mb-5">
     <h3 className="font-heading text-lg font-black text-white">{title}</h3>
     <span className="mt-1 block text-xs font-semibold text-white/40">{subtitle}</span>
@@ -15,7 +20,7 @@ const Footer = () => {
         <span className="absolute inset-0 bg-[url('/images/footer-right.png')] bg-cover bg-right-top bg-no-repeat opacity-10" aria-hidden="true" />
         <Container>
           <div className="relative">
-          <div className="relative z-10 grid items-start gap-8 py-24 lg:grid-cols-[1.35fr_0.72fr_0.72fr] lg:pl-[420px]">
+          <div className="relative z-10 grid items-start gap-8 py-16 sm:py-20 lg:grid-cols-[1.35fr_0.72fr_0.72fr] lg:py-24 lg:pl-[420px]">
             <div className="max-w-[336px]">
               <img src="/images/dana-software-logo-01.png" alt="دانا" className="w-48" />
               <p className="mt-6 text-justify text-sm leading-6 text-white/70">توسعه فناوری و نرم‌افزار دانا با تمرکز بر طراحی و تولید نرم‌افزارهای تخصصی، ارائه‌دهنده راهکارهای نوین در حوزه حسابداری، مالی و هوش مصنوعی است. ما با ارائه محصولات کاربردی مانند نرم‌افزار واسط مودیان و نرم‌افزار کلیپس، تلاش می‌کنیم تجربه‌ای سریع، امن و هوشمند برای کسب‌وکارها فراهم کنیم.</p>
@@ -42,14 +47,20 @@ const Footer = () => {
   className="
     relative
     lg:absolute
-    left-[-140px]
-    top-[-95px]
     z-20
-
-    h-[390px]
-    w-[470px]
-
+    mx-auto
+    mt-2
+    h-[280px]
+    w-full
+    max-w-[470px]
     overflow-visible
+    sm:h-[330px]
+    lg:absolute
+    lg:left-[-140px]
+    lg:top-[-95px]
+    lg:mt-0
+    lg:h-[390px]
+    lg:w-[470px]
   "
 >
   {/* کارت زرد */}
@@ -114,7 +125,7 @@ const Footer = () => {
         text-[#173b40]
       "
     >
-      <h3 className="font-heading text-[34px] font-black leading-none">
+      <h3 className="font-heading text-2xl font-black leading-none sm:text-[34px]">
         نیاز به راهنمایی دارید؟
       </h3>
 
@@ -128,12 +139,14 @@ const Footer = () => {
         className="
           mt-7
           flex
-          h-[54px]
+          h-11
           items-center
           gap-3
           rounded-xl
           bg-white
-          px-8
+          px-5
+          sm:h-[54px]
+          sm:px-8
           font-bold
           shadow-md
           transition
