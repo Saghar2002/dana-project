@@ -20,7 +20,7 @@ const Footer = () => {
         <span className="absolute inset-0 bg-[url('/images/footer-right.png')] bg-cover bg-right-top bg-no-repeat opacity-10" aria-hidden="true" />
         <Container>
           <div className="relative">
-          <div className="relative z-10 grid items-start gap-8 py-16 sm:py-20 lg:grid-cols-[1.35fr_0.72fr_0.72fr] lg:py-24 lg:pl-[420px]">
+          <div className="relative z-10 grid items-start gap-8 py-16 sm:py-20 lg:grid-cols-[1.35fr_0.72fr_0.72fr] lg:py-16 lg:pl-[420px]">
             <div className="max-w-[336px]">
               <img src="/images/dana-software-logo-01.png" alt="دانا" className="w-48" />
               <p className="mt-6 text-justify text-sm leading-6 text-white/70">توسعه فناوری و نرم‌افزار دانا با تمرکز بر طراحی و تولید نرم‌افزارهای تخصصی، ارائه‌دهنده راهکارهای نوین در حوزه حسابداری، مالی و هوش مصنوعی است. ما با ارائه محصولات کاربردی مانند نرم‌افزار واسط مودیان و نرم‌افزار کلیپس، تلاش می‌کنیم تجربه‌ای سریع، امن و هوشمند برای کسب‌وکارها فراهم کنیم.</p>
@@ -42,88 +42,65 @@ const Footer = () => {
             </nav>
           </div>
 
-          <div
-  dir="ltr"
-  className="
-    relative
-    lg:absolute
-    z-20
-    mx-auto
-    mt-2
-    h-[280px]
-    w-full
-    max-w-[470px]
-    overflow-visible
-    sm:h-[330px]
-    left-[-30px]
-    lg:left-[-10px]
-    lg:top-[50px]
-    lg:mt-0
-    lg:h-[390px]
-    lg:w-[470px]
-  "
->
-  {/* کارت زرد */}
-  <div
-  dir="ltr"
-  className="
-    relative
-    
-    z-20
-    mx-auto
-    mt-2
-    h-[280px]
-    w-full
-    max-w-[470px]
-    overflow-visible
-    sm:h-[330px]
-    lg:absolute
-    lg:left-[-140px]
-    lg:top-[-95px]
-    lg:mt-0
-    lg:h-[390px]
-    lg:w-[470px]
-  "
->
-  {/* عکس - پایین‌ترین لایه */}
-  <img
-    src="/images/footer-help.png"
-    alt="نیاز به راهنمایی دارید"
-    className="absolute inset-y-0 left-0 h-full w-[52%] rounded-r-[40px] object-cover"
-  />
+              <div
+                dir="ltr"
+                className="
+                  relative
+                  z-20
+                  mx-auto
+                  mt-2
+                  h-[280px]
+                  w-full
+                  max-w-[470px]
+                  overflow-visible
+                  sm:h-[330px]
+                  left-[-30px]
+                  lg:absolute
+                  lg:left-[-150px]
+                  lg:top-[-45px]
+                  lg:mt-0
+                  lg:h-[420px]
+                  lg:w-[470px]
+                "
+              >
 
-  {/* باکس زرد با برش مورب - روی عکس */}
-  <div
-    className="absolute inset-y-0 right-0 flex h-full w-[68%] items-center align-middle rounded-r-[70px] bg-[#f7b900] shadow-[0_20px_40px_rgba(0,0,0,0.18)]"
-    style={{ clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
-  >
-    <div dir="rtl" className="pr-6 pl-6 text-right text-[#173b40]">
-      <h3 className="font-heading lg:text-xl font-black leading-none sm:text-lg">
-        نیاز به راهنمایی دارید؟
-      </h3>
+                <img
+                  src="/images/footer-help.png"
+                  alt="نیاز به راهنمایی دارید"
+                  className="absolute inset-y-0 left-0 h-full w-[52%] rounded-r-[40px] object-cover"
+                />
 
-      <p className="mt-3 text-base font-medium text-[#173b40]/55">
-        ?Do you need help
-      </p>
 
-      
-      <a
-        href="tel:02191303862"
-        dir="ltr"
-        className="mt-7 flex h-11 w-fit items-center gap-3 rounded-xl text-[#f7b900] bg-white px-5 font-bold shadow-md transition hover:scale-[1.03] sm:h-[54px] sm:px-8">
-        <FiHeadphones className="text-[#f7b900]" />
-        021-91303862
-      </a>
-    </div>
-  </div>
-</div>
-</div>
+                <div
+                  className="absolute inset-y-0 right-0 flex h-full w-[68%] items-center justify-center bg-[#f7b900] shadow-[0_20px_40px_rgba(0,0,0,0.18)]"
+                  style={{ clipPath: "polygon(0% 0%, 85% 0%, 100% 100%, 15% 100%)" }}
+                >
+                <div dir="rtl" className="px-6 text-center text-[#173b40]">
+                  <h3 className="font-heading lg:text-xl font-black leading-none sm:text-lg">
+                    نیاز به راهنمایی دارید؟
+                  </h3>
+
+                <p className="mt-3 text-base font-medium text-[#173b40]/55">
+                  ?Do you need help
+                </p>
+
+                <a
+                  href="tel:02191303862"
+                  dir="ltr"
+                  className="mx-auto mt-7 flex h-11 w-fit items-center gap-3 rounded-xl text-[#f7b900] bg-white px-5 font-bold shadow-md transition hover:scale-[1.03] sm:h-[54px] sm:px-8"
+                >
+                <FiHeadphones className="text-[#f7b900]" />
+                021-91303862
+              </a>
+              </div>
+            </div>
+          </div>
 
           </div>
         </Container>
       </div>
 
-      <div className="bg-[#122a2e] py-10 text-white">
+      <div className="bg-[linear-gradient(to_left,#0d1f22_0%,#081316_60%)] py-14 text-white">
         <Container>
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
