@@ -58,7 +58,7 @@ const services: Service[] = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20" dir="rtl">
+    <section id="services" dir="rtl">
       <Container>
         <div className="relative z-10 mx-auto -mb-32 h-[201px] w-[184px] text-center">
           <div
@@ -75,7 +75,7 @@ const Services = () => {
               <path
                 d="M16.0596 0.5L167.94 0.5C177.575 0.5 184.875 9.19601 183.206 18.6846L153.485 187.685C152.182 195.095 145.744 200.5 138.22 200.5L45.7803 200.5C38.2557 200.5 31.818 195.095 30.5146 187.685L0.793945 18.6846C-0.874695 9.19602 6.4254 0.5 16.0596 0.5Z"
                 fill="white"
-                fillOpacity="0.5"
+                fillOpacity="0.55"
                 stroke="url(#services-title-border)"
               />
             </svg>

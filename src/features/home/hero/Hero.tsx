@@ -7,8 +7,8 @@ const Hero = () => {
       className="hero-pattern min-h-[135vh] pt-24 text-white"  // ← hero-pattern اضافه شده
       dir="rtl"
      >
-      <Container>
-        <section className="grid min-h-[calc(100vh-5rem)] items-center gap-8 py-12 sm:py-16 lg:min-h-[calc(100vh-114px)] lg:grid-cols-2 lg:gap-20">
+      <Container className="!px-4 min-[480px]:!px-6 min-[769px]:!px-20 ">
+        <section className="grid items-center  gap-8 py-12 sm:py-16 lg:min-h-[calc(100vh-114px)] lg:grid-cols-2 lg:gap-20">
           <div className="order-2 w-full min-w-0 text-center lg:order-1 lg:text-right">
             <div className="mb-7 flex flex-wrap justify-center gap-2 sm:mb-10 sm:gap-3 lg:justify-start">
               <span className="rounded-lg bg-emerald-900/40 px-4 py-2 text-sm font-bold text-[#78b66b]">فناوری پیشرفته</span>

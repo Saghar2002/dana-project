@@ -16,7 +16,7 @@ const posts: BlogPost[] = [
   },
   {
     title: "آینده نرم‌افزارهای سازمانی در عصر هوش مصنوعی",
-    category: "آموزش و نکات تخصصی",
+    category: "آموزش و نکات\u00A0تخصصی",
     image: "/images/blog-03.png",
     excerpt: "در سال‌های اخیر، هوش مصنوعی به یکی از مؤثرترین فناوری‌های تحول‌آفرین در دنیای نرم‌افزارهای سازمانی تبدیل شده است.",
   },
@@ -113,7 +113,7 @@ const Blog = () => {
   />
 
   {/* Category */}
-  <span className="absolute bottom-4 right-4 z-20 rounded-xl bg-[#ffbf00] px-6 py-3 text-sm  text-[#1a3b41]">
+  <span className="absolute bottom-4 right-4 z-20 rounded-xl bg-[#ffbf00] px-5 py-3 text-sm  text-[#1a3b41]">
     {category}
   </span>
 </div>
